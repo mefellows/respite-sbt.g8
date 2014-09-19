@@ -31,3 +31,13 @@ From within sbt run `g8Scaffold <TAB>` to see what can be auto-generated for you
 ### Creating Controllers
 
 `g8Scaffold controller`
+
+## Deploying
+
+Respite packages into an executable Jar file, from within your project dir run `sbt assembly` to package theh application.
+
+Then, from your environment, heroku, etc., ensure the appropriate environment variables are set and run the Jar:
+
+```
+DATABASE_PORT=27017 DATABASE_HOST=127.0.0.1 DATABASE_NAME=test_foo java -jar target/scala-2.10/my-project.jar
+```
