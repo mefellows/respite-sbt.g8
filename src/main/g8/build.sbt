@@ -17,10 +17,17 @@ libraryDependencies ++= Seq(
   Dependencies.Compile.scalatra,
   Dependencies.Compile.scalate,
   Dependencies.Compile.logback,
+  Dependencies.Compile.scalatraAuth,
+  Dependencies.Compile.scalatraJson,
+  Dependencies.Compile.subcut,
   Dependencies.Compile.Web.jettyServlet,
   Dependencies.Compile.Web.jettyWebapp,
+  Dependencies.Compile.Test.specs2,
+  Dependencies.Compile.Test.scalatest,
+  Dependencies.Compile.Test.scalatestMongo,
   Dependencies.Compile.Test.scalatraTest,
-  Dependencies.Compile.specs2
+  Dependencies.Compile.Test.scalaMock,
+  Dependencies.Compile.Test.mockito
 )
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) => {

@@ -1,4 +1,4 @@
-package $package$
+package $organisation$.controller
 
 import $organisation$.config.TestConfigurationModule
 import org.scalatest.concurrent.ScalaFutures
@@ -10,16 +10,18 @@ import org.scalatest._
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import scala.concurrent.ExecutionContext
-import $package$.$class_name$
+import $organisation$.model.$model_name$
+import $organisation$.repository.$model_name$Repository
+import $organisation$.test.{Awaiting, MongoSpecSupport}
 
-class $class_name$Spec extends ScalatraSuite with WordSpecLike with Matchers with BeforeAndAfter {
+class $model_name$ControllerSpec extends ScalatraSuite with WordSpecLike with Matchers with BeforeAndAfter with MongoSpecSupport with Awaiting {
   protected implicit def executor: ExecutionContext = ExecutionContext.global
   implicit val bindingModule = TestConfigurationModule
 
   import au.com.onegeek.respite.models.ModelJsonExtensions._
 
   val repository = new $model_name$Repository
-  addServlet(new $class_name$(repository = repository), "/$model_name;format="lower,word"$/*")
+  addServlet(new $model_name$Controller(repository = repository), "/$model_name;format="lower,word"$/*")
 
   before {
 
@@ -29,14 +31,15 @@ class $class_name$Spec extends ScalatraSuite with WordSpecLike with Matchers wit
 
   }
 
-  "A $class_name$" should {
+  "A $model_name$" should {
 
-    "Respond with a 200 on path /" in {
-      get("$model_name;format="lower,word"$") {
+    "Respond on path /" in {
+      get("/$model_name;format=" lower, word"$/") {
 
       }
+
+      // ...
     }
 
-    // ...
   }
 }
