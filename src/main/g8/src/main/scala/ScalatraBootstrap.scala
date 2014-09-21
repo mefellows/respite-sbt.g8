@@ -5,8 +5,8 @@ import $package$.config.{ApiDatasource, ProductionConfigurationModule}
 import org.scalatra._
 import javax.servlet.{ServletRegistration, ServletContext}
 import $package$.$servlet_name$
-import $package$.controller._
-import $package$.repository._
+//import $package$.controller._
+//import $package$.repository._
 
 import reactivemongo.bson.BSONObjectID
 import uk.gov.hmrc.mongo.MongoConnector

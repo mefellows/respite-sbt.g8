@@ -10,10 +10,6 @@ import _root_.akka.actor.ActorSystem
 object ProductionConfigurationModule extends NewBindingModule(module => {
   import module._
 
-  bind[DefaultDB] toProvider {
-    ApiDatasource.getConnection
-  }
-
   bind[ActorSystem] toProvider {
     ActorSystem()
   }
@@ -22,13 +18,7 @@ object ProductionConfigurationModule extends NewBindingModule(module => {
 object TestConfigurationModule extends NewBindingModule(module => {
   import module._
 
-  bind[DefaultDB] toProvider {
-    ApiDatasource.getConnection
-  }
-
   bind[ActorSystem] toProvider {
     ActorSystem()
   }
-
-
 })
