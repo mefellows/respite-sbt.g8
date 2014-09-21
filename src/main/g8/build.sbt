@@ -19,7 +19,8 @@ libraryDependencies ++= Seq(
   Dependencies.Compile.logback,
   Dependencies.Compile.Web.jettyServlet,
   Dependencies.Compile.Web.jettyWebapp,
-  Dependencies.Compile.Test.scalatraTest
+  Dependencies.Compile.Test.scalatraTest,
+  Dependencies.Compile.specs2
 )
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) => {
