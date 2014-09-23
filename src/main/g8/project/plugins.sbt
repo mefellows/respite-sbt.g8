@@ -24,3 +24,5 @@ addSbtPlugin("org.scoverage" %% "sbt-scoverage" % "0.99.5.1")
 addSbtPlugin("com.sksamuel.scoverage" %% "sbt-coveralls" % "0.0.5")
 
 addSbtPlugin("au.com.onegeek" % "sbt-dotenv" % "1.0.21")
+
+addSbtPlugin("com.typesafe.sbt" % "sbt-start-script" % "0.10.0")
