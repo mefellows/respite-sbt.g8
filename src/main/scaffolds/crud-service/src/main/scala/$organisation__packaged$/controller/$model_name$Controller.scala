@@ -22,6 +22,6 @@ import $organisation$.model.$model_name$
 /**
  * Controller class for $model_name$
  */
-class $model_name$Controller(repository: ReactiveRepository[$model_name$, BSONObjectID])(override implicit val bindingModule: BindingModule, override implicit val tag: ClassTag[$model_name$], override implicit val objectIdConverter: String => BSONObjectID) extends RestController[$model_name$, BSONObjectID]("$model_name;format="snake"$s", $model_name$.format, repository) with MetricsRestSupport[$model_name$, BSONObjectID] /* with Authentication with CachingRouteSupport */ {
+class $model_name$Controller(repository: ReactiveRepository[$model_name$, BSONObjectID])(override implicit val bindingModule: BindingModule, override implicit val tag: ClassTag[$model_name$]) extends RestController[$model_name$, BSONObjectID]("$model_name;format="snake"$s", $model_name$.format, repository) with MetricsRestSupport[$model_name$, BSONObjectID] /* with Authentication with CachingRouteSupport */ {
 
 }
