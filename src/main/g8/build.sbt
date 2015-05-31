@@ -39,9 +39,9 @@ mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) => {
 }
 }
 
-mainClass in assembly := Some("au.com.respite.JettyLauncher")
+mainClass in assembly := Some("$package$.JettyLauncher")
 
-mainClass in Compile := Some("au.com.respite.JettyLauncher")
+mainClass in Compile := Some("$package$.JettyLauncher")
 
 jarName in assembly := "$name;format="lower,hyphen"$.jar"
 
