@@ -32,9 +32,26 @@ From within sbt run `g8Scaffold <TAB>` to see what can be auto-generated for you
 
 `g8Scaffold controller`
 
-## Deploying
+## Build & Deploying
 
-Respite packages into an executable Jar file, from within your project dir run `sbt assembly` to package the application.
+### Heroku
+
+Respite is designed to work with Heroku out-of-the-box. Once you have created a Heroku app, a `git push heroku master` should get your deployment underway.
+
+```
+heroku addons:remove heroku-postgresql:my-respite-application
+heroku addons:add mongohq
+heroku config:set "DATABASE_URL=$(heroku config:get MONGOHQ_URL)"
+git push heroku master
+```
+
+### Standalone
+
+Respite comes with [SBT Native Packer](http://www.scala-sbt.org/sbt-native-packager/) by default which means you can package your service any which way.
+
+#### Fat Jar
+
+For example, to package your app into an executable Jar file, from within your project dir run `sbt assembly` to package the application.
 
 Then, from your environment, heroku, etc., ensure the appropriate environment variables are set and run the Jar:
 
