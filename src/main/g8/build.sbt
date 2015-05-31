@@ -1,5 +1,8 @@
 import $name;format="lower,word"$.Dependencies
 import AssemblyKeys._ // put this at the top of the file
+import NativePackagerKeys._
+
+packageArchetype.java_application
 
 resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
 
@@ -39,3 +42,5 @@ mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) => {
 mainClass in assembly := Some("au.com.respite.JettyLauncher")
 
 jarName in assembly := "$name;format="lower,hyphen"$.jar"
+
+herokuAppName in Compile := "$name;format="lower,hyphen"$"
