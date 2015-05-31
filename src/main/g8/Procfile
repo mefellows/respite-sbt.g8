@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/"$name;format="lower,hyphen"$"
+web: target/universal/stage/bin/$name;format="lower,hyphen"$
