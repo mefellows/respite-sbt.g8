@@ -8,7 +8,7 @@ object Dependencies {
   object Versions {
     val ScalaVersion    = "$scala_version$"
     val ScalatraVersion = "$scalatra_version$"
-    val RespiteVersion  = "0.2.0"
+    val RespiteVersion  = "0.2.3"
   }
 
   object Compile {

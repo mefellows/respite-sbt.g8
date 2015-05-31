@@ -14,6 +14,7 @@ import org.scalatra.sbt.PluginKeys._
 import com.mojolly.scalate.ScalatePlugin._
 import ScalateKeys._
 import scoverage.ScoverageSbtPlugin.instrumentSettings
+import com.typesafe.sbt.SbtStartScript
 
 object $name;format="Camel"$Build extends Build {
   val Organization = "$package$"
@@ -23,7 +24,7 @@ object $name;format="Camel"$Build extends Build {
   lazy val project = Project (
     "$name;format="lower,hyphen"$",
     file("."),
-    settings = Defaults.defaultSettings ++ ScalatraPlugin.scalatraWithJRebel ++ scalateSettings ++ Seq(
+    settings = SbtStartScript.startScriptForClassesSettings ++ Defaults.defaultSettings ++ ScalatraPlugin.scalatraWithJRebel ++ scalateSettings ++ Seq(
 
       organization := Organization,
       name := Name,
