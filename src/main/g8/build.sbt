@@ -5,6 +5,14 @@ packageArchetype.java_application
 
 resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
 
+resolvers += "Typesafe repository releases" at "http://repo.typesafe.com/typesafe/releases/"
+
+resolvers += "spray repo" at "http://repo.spray.io"
+
+resolvers += Resolver.bintrayRepo("hmrc", "releases")
+
+resolvers += Resolver.bintrayRepo("mefellows", "mfellows")
+
 giter8.ScaffoldPlugin.scaffoldSettings
 
 name := "$name;format="lower,hyphen"$"
