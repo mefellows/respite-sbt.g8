@@ -1,5 +1,4 @@
 import $name;format="lower,word"$.Dependencies
-import AssemblyKeys._ // put this at the top of the file
 import NativePackagerKeys._
 
 packageArchetype.java_application
@@ -8,10 +7,7 @@ resolvers += Resolver.url("typesafe", url("http://repo.typesafe.com/typesafe/ivy
 
 giter8.ScaffoldPlugin.scaffoldSettings
 
-
 name := "$name;format="lower,hyphen"$"
-
-assemblySettings
 
 resolvers += Classpaths.typesafeReleases
 
