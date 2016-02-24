@@ -13,7 +13,6 @@ import sbt._
 import org.scalatra.sbt.PluginKeys._
 import com.mojolly.scalate.ScalatePlugin._
 import ScalateKeys._
-import scoverage.ScoverageSbtPlugin.instrumentSettings
 
 object $name;format="Camel"$Build extends Build {
   val Organization = "$package$"
